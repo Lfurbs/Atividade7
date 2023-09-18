@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+main(){
+  
+  int num=0, num1=0;
+
+  printf("Informe o numero:");
+  scanf("%d", &num);
+
+  while (num >= num1)
+  {
+    printf("\nResultado=%d", num1);
+    num1 += 2;
+  }
+}
