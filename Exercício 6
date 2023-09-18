@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+main(){
+    int abac=5, quantAbac=0, quantMac=0, per=4, mac=1, resultFinal=0, menu, quantPer=0, comprarMais = 0;
+    
+  do{
+      int choice;
+      printf("Informe o numero correspondente ao da fruta (1-abacaxi 2-maca 3-pera):");
+      scanf("%d", &choice);
+
+        if (choice < 1 || choice > 3)
+        {
+            printf("Fruta nao cadastrada\n");
+        }
+
+        if (choice >= 1 || choice <= 3)
+        {
+            switch (choice){
+            case 1:
+                printf("Quantas/os?");
+                scanf("%d", &quantAbac);
+                resultFinal += abac * quantAbac;
+                break;
+            case 2:
+                printf("Quantas/os?");
+                scanf("%d", &quantMac);
+                resultFinal += mac * quantMac;
+                break;
+            case 3:
+                printf("Quantas/os?");
+                scanf("%d", &quantPer);
+                resultFinal += per * quantPer;
+                break;
+            }
+        }
+        printf("O valor da compra e: %d\n", resultFinal);
+        printf("\nPara voltar ao menu digite 1, para sair digite 0 ");
+        scanf("%d", &menu);
+
+    } while (menu > 0);
+
+    return 0;
+}
